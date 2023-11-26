@@ -20,7 +20,12 @@ const config: Config = {
         '100': '23rem',
         '1180': '77rem',
         '924': '65rem',
-        },
+        '500': '500px',
+      },
+      height: {
+        'big': '40rem',
+
+      },
     },
   },
   plugins: [],

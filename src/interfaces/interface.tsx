@@ -75,7 +75,7 @@ export interface IFilm{
   year: number,
   rating: number,
   runtime: number,
-  genres: [string],    
+  genres: [String],    
   like_count: number,
   description_intro: string,
   description_full: string,
