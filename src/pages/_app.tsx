@@ -11,8 +11,6 @@ const App = ({ Component, pageProps }: AppProps) => (
       <Component {...pageProps} />
     </Layout>
   </main>
-
-
 )
 
 export default App
