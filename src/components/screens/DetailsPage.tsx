@@ -1,12 +1,12 @@
 import { IFilmData } from "@/interfaces/interface"
 import Head from "next/head"
 import Image from "next/image"
-import { FC, JSXElementConstructor, PromiseLikeOfReactNode, ReactElement, ReactNode, ReactPortal } from 'react'
+import { FC } from 'react'
 import star_dog from '../../../public/star_dog.png'
 import page_dog from '../../../public/page_dog.png'
 
 
-const Film: FC<IFilmData> = ({ movie }) => {
+const DetailsPage: FC<IFilmData> = ({ movie }) => {
   let data = movie.movie
   return (
     <>
@@ -72,4 +72,4 @@ const Film: FC<IFilmData> = ({ movie }) => {
 }
 
 
-export default Film
+export default DetailsPage

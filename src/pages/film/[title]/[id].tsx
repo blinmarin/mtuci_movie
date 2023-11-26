@@ -1,14 +1,15 @@
-import Film from "@/components/screens/Film"
+
 import { useRouter } from "next/router"
 import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { IFilmData, IFilm, IMovieData, IMovieDataSingle } from "@/interfaces/interface"
 import { MoviesService } from "@/services/movies"
 import { ParsedUrlQuery } from "querystring"
+import DetailsPage from "@/components/screens/DetailsPage"
 
 const FilmPage: NextPage<IFilmData> = ({movie}) => { 
     return (
         <div>
-            <Film movie={movie} />
+            <DetailsPage movie={movie} />
         </div>
     
     )
