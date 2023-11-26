@@ -16,7 +16,8 @@ export interface IFilmList{
 }
 
 export interface IMovieData{
-  movies: IMovie[]
+  movies: IMovie[],
+  page: number
 }
 
 export interface IMovieDataSingle{
@@ -95,4 +96,8 @@ export interface Page{
   id: number;
   title: string;
   path: string
+}
+
+export interface Page_number{
+  page_number: number
 }
