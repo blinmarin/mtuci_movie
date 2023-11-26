@@ -9,17 +9,20 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "next/font": "^14.0.2",
+    "axios": "^1.6.2",
+    "next": "latest",
+    "proxy": "^2.1.1",
     "react": "latest",
-    "react-dom": "latest",
-    "next": "latest"
+    "react-dom": "latest"
   },
   "devDependencies": {
-    "typescript": "latest",
-    "@types/react": "latest",
     "@types/node": "latest",
+    "@types/react": "latest",
     "@types/react-dom": "latest",
     "autoprefixer": "latest",
     "postcss": "latest",
-    "tailwindcss": "latest"
+    "tailwindcss": "latest",
+    "typescript": "latest"
   }
 }
