@@ -5,6 +5,7 @@ import MovieItem from "../MovieItem";
 import Pagination from "../Pagination";
 
 const Movies: FC<IMovieData> = ({movies, page}) =>{
+
     return(
     <>
         <Head>

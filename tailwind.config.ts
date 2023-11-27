@@ -21,10 +21,14 @@ const config: Config = {
         '1180': '77rem',
         '924': '65rem',
         '500': '500px',
+        '650': '650px',
       },
       height: {
         'big': '40rem',
 
+      },
+      colors: {
+        'amber-25': '#fffbf5',
       },
     },
   },

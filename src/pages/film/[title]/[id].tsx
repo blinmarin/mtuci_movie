@@ -1,4 +1,3 @@
-
 import { useRouter } from "next/router"
 import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next"
 import { IFilmData, IFilm, IMovieData, IMovieDataSingle } from "@/interfaces/interface"
