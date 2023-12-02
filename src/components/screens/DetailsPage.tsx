@@ -16,13 +16,13 @@ const DetailsPage: FC<IFilmData> = ({ movie }) => {
       </Head>
 
       
-      <div className="flex px-20 pt-20 min-h-500">
+      <div className="flex px-20 pt-20 min-h-500 max-medium:text-xl max-medium:px-10 max-medium:pt-10 max-half:flex-col max-half:items-center">
 
-        <img className='h-big w-500 rounded-3xl mr-20 shadow-2xl' src={data.large_cover_image} alt={data.title} />
+        <img className='w-500 h-750 rounded-3xl mr-20 shadow-2xl mb-10 max-medium:w-64 max-medium:h-96 max-medium:mr-10 max-half:mr-0' src={data.large_cover_image} alt={data.title} />
           
-        <div className="">
+        <div className="max-half:flex max-half:flex-col max-mini:w-300">
 
-          <div className="text-6xl mb-3">{data.title}</div>
+          <div className="text-6xl mb-3 max-medium:text-3xl max-half:text-center">{data.title}</div>
 
           <div className="mb-4">
             <span >Year: </span>
@@ -33,17 +33,17 @@ const DetailsPage: FC<IFilmData> = ({ movie }) => {
           <div className="flex items-center mb-4">
             <div className="mr-5">Rating:</div>
             <div className="font-medium mr-4">{data.rating}</div>
-            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 1 ? "" : 'brightness-50'} placeholder='blur'></Image>
-            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 3 ? "" : 'brightness-50'} placeholder='blur'></Image>
-            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 5 ? "" : 'brightness-50'} placeholder='blur'></Image>
-            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 7 ? "" : 'brightness-50'} placeholder='blur'></Image>
-            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 9 ? "" : 'brightness-50'} placeholder='blur'></Image>
+            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 1 ? "max-mini:w-7 max-mini:h-7" : 'brightness-50 max-mini:w-7 max-mini:h-7'} placeholder='blur'></Image>
+            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 3 ? "max-mini:w-7 max-mini:h-7" : 'brightness-50 max-mini:w-7 max-mini:h-7'} placeholder='blur'></Image>
+            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 5 ? "max-mini:w-7 max-mini:h-7" : 'brightness-50 max-mini:w-7 max-mini:h-7'} placeholder='blur'></Image>
+            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 7 ? "max-mini:w-7 max-mini:h-7" : 'brightness-50 max-mini:w-7 max-mini:h-7'} placeholder='blur'></Image>
+            <Image src={star_dog} width={40} height={40} alt='star_dog' className={data.rating >= 9 ? "max-mini:w-7 max-mini:h-7" : 'brightness-50 max-mini:w-7 max-mini:h-7'} placeholder='blur'></Image>
           </div>
 
 
-          <div className="flex flex-wrap items-center mb-4">
-            <div>Genre:</div>
-            {data.genres.map((genre: string) => <div className="bg-amber-800 text-amber-100 rounded-xl p-1 ml-3 text-xl font-medium">{genre}</div>)}
+          <div className="flex flex-wrap items-center">
+            <div className="mb-4">Genre:</div>
+            {data.genres.map((genre: string) => <div className="bg-amber-800 text-amber-100 rounded-xl p-1 ml-3 text-xl font-medium mb-4 max-medium:text-lg">{genre}</div>)}
           </div>
 
           <div className="mb-5">
@@ -52,9 +52,9 @@ const DetailsPage: FC<IFilmData> = ({ movie }) => {
           </div>
 
           <div className="flex items-center mb-10">
-            <button className="w-40 h-10 bg-amber-800 text-amber-100 rounded-xl p-1 mr-5 text-xl font-medium  hover:bg-amber-300 hover:text-amber-800 hover:scale-110 hover:transition hover:duration-500">Watch</button>
-            <button className="w-40 h-10 bg-amber-800 text-amber-100 rounded-xl p-1 text-xl font-medium  hover:bg-amber-300 hover:text-amber-800 hover:scale-110 hover:transition hover:duration-500">Download</button>
-            <Image src={page_dog} width={160} height={160} alt='page_dog' className="mx-10" placeholder='blur'></Image>
+            <button className="w-40 h-10 bg-amber-800 text-amber-100 rounded-xl p-1 mr-5 text-xl font-medium  hover:bg-amber-300 hover:text-amber-800 hover:scale-110 hover:transition hover:duration-500 max-medium:text-lg">Watch</button>
+            <button className="w-40 h-10 bg-amber-800 text-amber-100 rounded-xl p-1 text-xl font-medium  hover:bg-amber-300 hover:text-amber-800 hover:scale-110 hover:transition hover:duration-500 max-medium:text-lg">Download</button>
+            <Image src={page_dog} width={160} height={160} alt='page_dog' className="mx-10 max-mini:w-32 max-mini:mx-5" placeholder='blur'></Image>
           </div>
 
           <div className="flex flex-row-reverse">

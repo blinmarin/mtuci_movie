@@ -11,7 +11,7 @@ const navigation: Page[] = [
 const Navbar: FC = () => {
     const {push, pathname} = useRouter()
     return (
-    <nav className='p-2 px-10 flex w-screen h-24 bg-amber-300'>
+    <nav className='p-2 px-10 flex w-screen h-24 bg-amber-300 max-mini:px-5'>
         <div className='pr-10'>
         <Image src={logo_dog} width={103} height={103} alt='logo_dog' placeholder='blur'></Image>
         </div>

@@ -12,7 +12,7 @@ const Movies: FC<IMovieData> = ({movies, page}) =>{
             <title>Home</title>
         </Head>
         <div className="flex justify-center"> 
-            <div className='flex flex-wrap justify-center 2xl:w-screen xl:w-1180 lg:w-924'>
+            <div className='flex flex-wrap justify-center 2xl:w-screen xl:w-1280 lg:w-1020'>
                 {movies.map(movie => <MovieItem key={movie.id} movie={movie}/>)}
             </div> 
         </div>
