@@ -38,7 +38,6 @@ const Comments: FC<IFilmData> = ({ movie }) => {
         if (typeof window !== 'undefined') {
 
             let newComment = {
-                // id: 1
                 comentator_value: comentators,
                 comment_value: comments
             }

@@ -22,6 +22,7 @@ const config: Config = {
         varela: ['Varela Round']
       },
       width: {
+        '2000': '2000px',
         '100': '23rem',
         '1020': '1020px',
         '1280': '1280px',

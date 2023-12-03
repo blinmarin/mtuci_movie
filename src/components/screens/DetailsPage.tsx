@@ -5,21 +5,26 @@ import { FC } from 'react'
 import star_dog from '../../../public/star_dog.png'
 import page_dog from '../../../public/page_dog.png'
 import Comments from "../Comments"
+import FavoriteIcon from "../FavoriteIcon"
 
 
 const DetailsPage: FC<IFilmData> = ({ movie }) => {
   let data = movie.movie
+
   return (
     <>
       <Head>
         <title>{data.title}</title>
       </Head>
 
-      
-      <div className="flex px-20 pt-20 min-h-500 max-medium:text-xl max-medium:px-10 max-medium:pt-10 max-half:flex-col max-half:items-center">
 
-        <img className='w-500 h-750 rounded-3xl mr-20 shadow-2xl mb-10 max-medium:w-64 max-medium:h-96 max-medium:mr-10 max-half:mr-0' src={data.large_cover_image} alt={data.title} />
-          
+      <div className="flex px-20 pt-20 max-medium:text-xl max-medium:px-10 max-medium:pt-10 max-half:flex-col max-half:items-center">
+
+
+        <img className='relative w-500 h-750 rounded-3xl mr-20 shadow-2xl mb-10 max-medium:w-64 max-medium:h-96 max-medium:mr-10 max-half:mr-0' src={data.large_cover_image} alt={data.title} />
+
+
+
         <div className="max-half:flex max-half:flex-col max-mini:w-300">
 
           <div className="text-6xl mb-3 max-medium:text-3xl max-half:text-center">{data.title}</div>
@@ -46,9 +51,13 @@ const DetailsPage: FC<IFilmData> = ({ movie }) => {
             {data.genres.map((genre: string) => <div className="bg-amber-800 text-amber-100 rounded-xl p-1 ml-3 text-xl font-medium mb-4 max-medium:text-lg">{genre}</div>)}
           </div>
 
+          <div className="mb-4 flex items-center">
+            <FavoriteIcon movie={movie} />
+          </div>
+
           <div className="mb-5">
             <span className={data.description_full && data.description_intro ? '' : 'hidden'}>Description: </span>
-            <span className="font-medium">{data.description_full ? data.description_full : data.description_intro }</span>
+            <span className="font-medium">{data.description_full ? data.description_full : data.description_intro}</span>
           </div>
 
           <div className="flex items-center mb-10">
@@ -58,11 +67,11 @@ const DetailsPage: FC<IFilmData> = ({ movie }) => {
           </div>
 
           <div className="flex flex-row-reverse">
-          
+
           </div>
 
-          
-          
+
+
 
 
         </div>
