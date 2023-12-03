@@ -1,8 +1,7 @@
 import Movies from "@/components/screens/Movies"
 import { IMovieData} from "@/interfaces/interface"
 import { MoviesService } from "@/services/movies"
-import { GetServerSideProps, GetStaticPaths, GetStaticProps, NextPage } from "next"
-import { useEffect, useState } from "react"
+import { GetStaticProps, NextPage } from "next"
 
 const MoviesPage: NextPage<IMovieData> = ({movies, page}) =>{
 

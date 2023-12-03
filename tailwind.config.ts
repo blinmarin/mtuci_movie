@@ -11,6 +11,7 @@ const config: Config = {
       'mini': '450px',
       'medium': '1150px',
       'half': '790px',
+      'small': '600px',
     },
     extend: {
       backgroundImage: {
