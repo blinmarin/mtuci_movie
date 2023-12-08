@@ -1,5 +1,6 @@
-import { IResponse, IFilmList, IResponseFilm } from './../interfaces/interface';
+import { IResponse, IResponseFilm } from './../interfaces/interface';
 import axios from "axios";
+
 const API_URL = 'https://yts.mx/api/v2//list_movies.json?limit=24'
 const API_URL_DETAILS = 'https://yts.mx/api/v2/movie_details.json'
 

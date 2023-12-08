@@ -13,8 +13,8 @@ const PaginationPage: NextPage<IMovieData> = ({movies, page}) => {
       )}
 
     export const getServerSideProps:GetServerSideProps<IMovieData> = async (context) => {
-    let a = context.params
-    const all_movies = await MoviesService.getMovies(Number(a?.page))
+    let params = context.params
+    const all_movies = await MoviesService.getMovies(Number(params?.page))
     return {props: {movies: all_movies.movies, page: all_movies.page_number}}
     }
 
