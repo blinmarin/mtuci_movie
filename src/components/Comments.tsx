@@ -11,13 +11,19 @@ const Comments: FC<IFilmData> = ({ movie }) => {
 
     let [comments, setComments] = useState('')
     let [comentators, setComentators] = useState('')
-    let [storageData, setStorageData] = useState([{ comentator_value: '', comment_value: '' }])
+    let [storageData, setStorageData] = useState([{movie_id:'', comment_id: 0, comentator_value: '', comment_value: '' }])
 
+
+    
 
     useEffect(() => {
-        setStorageData(JSON.parse(String(getLocalStorage(movie.movie.id))))
+        setStorage()
+        window.addEventListener('DELETE COMMENT!', () => setStorage())
     }, [])
 
+    function setStorage(){
+        setStorageData(JSON.parse(String(getLocalStorage(movie.movie.id))))
+    }
 
     function createStor(newComment: Commentariy) {
         let stor: [Commentariy]
@@ -36,11 +42,27 @@ const Comments: FC<IFilmData> = ({ movie }) => {
 
     function writeComment() {
         if (typeof window !== 'undefined') {
+            let newComment = {movie_id: '', comment_id: 0, comentator_value: '', comment_value: ''}
 
-            let newComment = {
-                comentator_value: comentators,
-                comment_value: comments
+            let data = getLocalStorage(movie.movie.id)
+            if (data) {
+                newComment = {
+                    movie_id: movie.movie.id,
+                    comment_id: storageData[storageData.length - 1].comment_id + 1,
+                    comentator_value: comentators,
+                    comment_value: comments
+                }
             }
+            else {
+                newComment = {
+                    movie_id: movie.movie.id,
+                    comment_id: 0,
+                    comentator_value: comentators,
+                    comment_value: comments
+                }
+            }
+
+
             setLocalStorage(String(movie.movie.id), JSON.stringify(createStor(newComment)))
             setComments('')
             setComentators('')
@@ -48,6 +70,7 @@ const Comments: FC<IFilmData> = ({ movie }) => {
         }
 
     }
+
 
 
 
@@ -74,12 +97,12 @@ const Comments: FC<IFilmData> = ({ movie }) => {
                 <div className="mb-5" >Comments</div>
                 {storageData ? storageData.map((data) => <CommentItem data={data} />) : <div className="mb-10 max-mini:text-center">There are no comments yet. Become the first!</div>}
             </div>
-                
 
 
 
 
-            
+
+
         </div>
     )
 }

@@ -3,6 +3,11 @@ export function getLocalStorage(key: string){
     return data
 }
 
+export function delLocalStorage(key: string){
+    const data = window.localStorage.removeItem(key)
+    return data
+}
+
 export function setLocalStorage(key: string, value: string){
     if (window === undefined){return}
     window.localStorage.setItem(key, value)
