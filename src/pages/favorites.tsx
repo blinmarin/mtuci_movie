@@ -15,7 +15,7 @@ const FavoritesPage = () => {
 
     async function getFilms(likes: [number]) {
         let MovieMass: IFilm[] = []
-        for (let i = 0; i < likes.length; i++) {
+        for (let i = 0; i < likes?.length; i++) {
             let movie = await MoviesService.getFilm(likes[i])
             MovieMass.push(movie?.movie)
 
